@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muxit Driver Registry</title>
+  <meta name="description" content="Browse community-contributed drivers for Muxit, a hardware orchestration platform.">
+  <meta property="og:title" content="Muxit Driver Registry">
+  <meta property="og:description" content="Browse community-contributed drivers for Muxit.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="page">
+    <header class="page-header">
+      <h1>Muxit Driver Registry</h1>
+      <p class="tagline">Browse community-contributed drivers for <a href="https://github.com/muxit-io/muxit-development">Muxit</a>, a hardware orchestration platform.</p>
+      <nav class="header-links">
+        <a href="https://github.com/muxit-io/driver-registry/blob/main/CONTRIBUTING.md">Submit a driver</a>
+        <a href="./registry.json">Raw registry.json</a>
+        <a href="https://github.com/muxit-io/driver-registry">View on GitHub</a>
+      </nav>
+    </header>
+
+    <div class="dm-toolbar">
+      <input
+        id="search"
+        class="dm-search-input"
+        type="search"
+        placeholder="Search drivers by name, description, tag, or author..."
+        autocomplete="off"
+      >
+      <select id="sort" class="dm-sort-select" aria-label="Sort drivers">
+        <option value="name">Sort: Name (A-Z)</option>
+        <option value="published">Sort: Newest</option>
+      </select>
+    </div>
+
+    <nav id="tabs" class="dm-tabs" aria-label="Group filter">
+      <!-- Populated by app.js -->
+    </nav>
+
+    <div id="list" class="dm-list" aria-live="polite">
+      <div class="dm-empty">Loading drivers…</div>
+    </div>
+
+    <footer class="page-footer">
+      Registry hosted at <a href="./registry.json">muxit-io.github.io/driver-registry/registry.json</a> · Updated <span id="updated">—</span>
+    </footer>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>

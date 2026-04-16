@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{name}} — Muxit Driver Registry</title>
+  <meta name="description" content="{{metaDescription}}">
+  <meta property="og:title" content="{{name}} — Muxit Driver Registry">
+  <meta property="og:description" content="{{metaDescription}}">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+  <main class="page">
+    <nav class="breadcrumb">
+      <a href="../../">Driver Registry</a> / {{name}}
+    </nav>
+
+    <header class="detail-header">
+      <div class="detail-header-info">
+        <h1 class="detail-title">{{name}}</h1>
+        <div class="detail-meta">
+          <span class="dm-tag dm-tag-version">v{{version}}</span>
+          {{{tierBadge}}}
+          {{{groupBadge}}}
+          {{{authorBadge}}}
+          {{{licenseBadge}}}
+        </div>
+        {{{descriptionBlock}}}
+      </div>
+    </header>
+
+    <div class="detail-actions">
+      <a class="dm-btn dm-btn-download" href="{{downloadUrl}}">Download .muxdriver</a>
+      {{{repositoryButton}}}
+    </div>
+
+    <section class="detail-section">
+      <h2>Details</h2>
+      <dl class="metadata-grid">
+        <dt>Driver ID</dt>
+        <dd><code>{{id}}</code></dd>
+        <dt>Version</dt>
+        <dd>{{version}}</dd>
+        {{{metadataRows}}}
+      </dl>
+    </section>
+
+    {{{tagsSection}}}
+    {{{readmeSection}}}
+    {{{changelogSection}}}
+
+    <footer class="page-footer">
+      Source entry: <a href="https://github.com/muxit-io/driver-registry/blob/main/drivers/{{slug}}.json"><code>drivers/{{slug}}.json</code></a>
+    </footer>
+  </main>
+</body>
+</html>

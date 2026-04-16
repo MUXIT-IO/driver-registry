@@ -19,33 +19,44 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide. The short version:
 3. Generate a registry entry (using `node drivers.js registry` in the Muxit repo)
 4. Fork this repo, add the JSON file to `drivers/`, and open a PR
 
-## Registry URL
+## Browse the Registry
 
-```
-https://muxit-io.github.io/driver-registry/registry.json
-```
+- Browsable list: <https://muxit-io.github.io/driver-registry/>
+- Per-driver page: `https://muxit-io.github.io/driver-registry/drivers/<publisher>-<name>/`
+- Raw JSON index: <https://muxit-io.github.io/driver-registry/registry.json>
+
+The browsable pages are generated from the same `drivers/*.json` files as the registry, so submitting a driver (see [CONTRIBUTING.md](CONTRIBUTING.md)) automatically gives it a page.
 
 ## Local Development
 
-Both scripts are zero-dependency Node.js:
+Zero-dependency Node.js scripts:
 
 ```bash
 # Validate all driver entries
 node scripts/validate-entry.js
 
-# Build the combined registry.json
+# Build the combined registry.json + static site
 node scripts/build-registry.js
-# Output: dist/registry.json
+# Output: dist/registry.json, dist/index.html, dist/styles.css,
+#         dist/app.js, dist/drivers/<slug>/index.html
+```
+
+Preview locally with any static server, e.g.:
+
+```bash
+python3 -m http.server -d dist 8000
+# then open http://localhost:8000/
 ```
 
 ## Structure
 
 ```
 drivers/           JSON entry files (one per driver)
+site/              Static-site source (landing page, stylesheet, per-driver template)
 scripts/           Build and validation scripts
-  build-registry.js    Combines drivers/*.json into registry.json
+  build-registry.js    Builds registry.json and the static site into dist/
   validate-entry.js    Validates entry fields and uniqueness
 .github/workflows/
   validate.yml         Runs on PRs: validates entries
-  build-and-deploy.yml Runs on merge: builds + deploys to GitHub Pages
+  build-and-deploy.yml Runs on merge: builds + deploys dist/ to GitHub Pages
 ```
