@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-04-18T13:01:41.278Z",
+  "updated": "2026-04-18T13:24:27.215Z",
   "drivers": [
     {
       "id": "muxit/serial-probe",
