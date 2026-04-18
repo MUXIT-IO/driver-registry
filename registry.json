@@ -1,7 +1,29 @@
 {
   "version": 1,
-  "updated": "2026-04-18T13:24:27.215Z",
+  "updated": "2026-04-18T13:29:19.092Z",
   "drivers": [
+    {
+      "id": "muxit/audiosynth",
+      "name": "AudioSynth",
+      "version": "1.0.1",
+      "description": "Software audio synthesizer. Plays tones, musical notes, and short melodies on the server host's default audio output — useful for lab-side audible notifications, robot/CNC feedback tones, and experiment-complete beeps. Four waveforms (sine, square, triangle, sawtooth), volume control, and click-free envelopes.",
+      "author": {
+        "name": "muxit",
+        "github": "muxit-io"
+      },
+      "group": "utilities",
+      "tier": 3,
+      "tags": [
+        "audio",
+        "synth",
+        "notification"
+      ],
+      "downloadUrl": "https://github.com/MUXIT-IO/muxit-drivers/releases/download/driver/muxit-audiosynth/v1.0.1/muxit-audiosynth-v1.0.1.muxdriver",
+      "downloadSize": 241278,
+      "sha256": "ff1c0a46d9b425549f0e11f4a6f1d6a7c416aada63107db1d0969d9ba4071a85",
+      "minMuxitVersion": "0.3.0",
+      "published": "2026-04-18T13:28:47.161Z"
+    },
     {
       "id": "muxit/serial-probe",
       "name": "SerialProbe",
