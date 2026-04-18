@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "updated": "2026-04-18T13:01:41.278Z",
+  "drivers": [
+    {
+      "id": "muxit/serial-probe",
+      "name": "SerialProbe",
+      "version": "0.1.0",
+      "description": "AI-assisted serial protocol reverse-engineering: captures traffic in labelled windows, detects framing and checksums locally, correlates stimulus/response, and exports a working connector config.",
+      "author": {
+        "name": "Muxit",
+        "github": "muxit-io"
+      },
+      "group": "communication",
+      "tier": 1,
+      "tags": [
+        "serial",
+        "monitor",
+        "terminal",
+        "other"
+      ],
+      "license": "MIT",
+      "repository": "https://github.com/muxit-io/muxit-drivers",
+      "downloadUrl": "https://github.com/MUXIT-IO/muxit-drivers/releases/download/driver/muxit-serial-probe/v0.1.0/muxit-serial-probe-v0.1.0.muxdriver",
+      "downloadSize": 11292,
+      "sha256": "5d6e4d24c2d9bbb24ec644776c3462385837065cd4dc2e8a856c6ef001c7b4fd",
+      "minMuxitVersion": "0.3.0",
+      "published": "2026-04-18T12:43:14.315Z"
+    }
+  ]
+}
