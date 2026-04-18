@@ -1,0 +1,22 @@
+{
+  "id": "muxit/scpi",
+  "name": "Scpi",
+  "version": "1.1.1",
+  "description": "Generic SCPI instrument driver — works with any SCPI-compliant device (oscilloscopes, multimeters, function generators, power supplies, spectrum analyzers) over TCP/IP (LXI, raw socket port 5025) or Serial (RS-232/USB). Provides raw query/write access, configurable timeouts, init command sequences, and auto-connect with *IDN? identity query.",
+  "author": {
+    "name": "muxit",
+    "github": "muxit-io"
+  },
+  "group": "instruments",
+  "tier": 3,
+  "tags": [
+    "daq",
+    "serial",
+    "networking"
+  ],
+  "downloadUrl": "https://github.com/MUXIT-IO/muxit-drivers/releases/download/driver/muxit-scpi/v1.1.1/muxit-scpi-v1.1.1.muxdriver",
+  "downloadSize": 232513,
+  "sha256": "3da58ef35f6289506d9d6cc4eb8c3a2eb85227aa922d496b79f7dc53aca5d838",
+  "minMuxitVersion": "0.3.0",
+  "published": "2026-04-18T13:30:32.890Z"
+}
