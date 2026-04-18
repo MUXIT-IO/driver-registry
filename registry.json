@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-04-18T13:30:56.336Z",
+  "updated": "2026-04-18T13:43:50.589Z",
   "drivers": [
     {
       "id": "muxit/audiosynth",
@@ -70,7 +70,7 @@
     {
       "id": "muxit/serial-probe",
       "name": "SerialProbe",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "AI-assisted serial protocol reverse-engineering: captures traffic in labelled windows, detects framing and checksums locally, correlates stimulus/response, and exports a working connector config.",
       "author": {
         "name": "Muxit",
@@ -86,11 +86,11 @@
       ],
       "license": "MIT",
       "repository": "https://github.com/muxit-io/muxit-drivers",
-      "downloadUrl": "https://github.com/MUXIT-IO/muxit-drivers/releases/download/driver/muxit-serial-probe/v0.1.0/muxit-serial-probe-v0.1.0.muxdriver",
-      "downloadSize": 11292,
-      "sha256": "5d6e4d24c2d9bbb24ec644776c3462385837065cd4dc2e8a856c6ef001c7b4fd",
+      "downloadUrl": "https://github.com/MUXIT-IO/muxit-drivers/releases/download/driver/muxit-serial-probe/v0.1.1/muxit-serial-probe-v0.1.1.muxdriver",
+      "downloadSize": 11287,
+      "sha256": "588deef6269d7e8b8fafd8f2dcb5bea9dd11b216f37eee1e5da7fa87b28cbaeb",
       "minMuxitVersion": "0.3.0",
-      "published": "2026-04-18T12:43:14.315Z"
+      "published": "2026-04-18T13:43:29.744Z"
     }
   ]
 }
