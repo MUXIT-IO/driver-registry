@@ -101,9 +101,19 @@ Each file in `drivers/` must be a JSON object with these fields:
   "downloadSize": 4096,
   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "minMuxitVersion": "0.3.0",
-  "published": "2026-04-10T00:00:00Z"
+  "published": "2026-04-10T00:00:00Z",
+  "changelog": "## 1.0.0\n\n- Initial release.\n"
 }
 ```
+
+### Changelog
+
+The optional `changelog` field is rendered on the driver's detail page.
+If you're using the Muxit Dev Console publish wizard or `node drivers.js
+registry`, this field is populated automatically from a top-level
+`CHANGELOG.md` in your driver source directory — scoped to the version
+being published. See [Driver Marketplace &rarr; CHANGELOG.md](https://muxit-io.github.io/docs/guides/driver-marketplace.html#changelog-md)
+in the Muxit docs for the supported heading styles.
 
 ## Validation Rules
 
