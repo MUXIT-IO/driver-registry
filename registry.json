@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-04-18T17:45:22.763Z",
+  "updated": "2026-04-19T07:39:20.585Z",
   "drivers": [
     {
       "id": "muxit/audiosynth",
@@ -27,7 +27,7 @@
     {
       "id": "muxit/midi",
       "name": "Midi",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "Advanced MIDI driver — live input/output with any USB or virtual MIDI device, per-channel filtering, pass-through, internal 24-PPQN clock with transport control, Standard MIDI File (SMF) playback and recording, panic/all-notes-off, and a learn helper for mapping physical controls. Streams incoming events as JSON for scripts and dashboards.",
       "author": {
         "name": "muxit",
@@ -39,11 +39,11 @@
         "audio",
         "midi"
       ],
-      "downloadUrl": "https://github.com/MUXIT-IO/muxit-drivers/releases/download/driver/muxit-midi/v0.1.0/muxit-midi-v0.1.0.muxdriver",
-      "downloadSize": 341999,
-      "sha256": "2156177111d716e30560bc58a7602d0b1bd5e203e3a62307e724bdc6f29be4b3",
+      "downloadUrl": "https://github.com/MUXIT-IO/muxit-drivers/releases/download/driver/muxit-midi/v0.1.1/muxit-midi-v0.1.1.muxdriver",
+      "downloadSize": 346413,
+      "sha256": "048e1980decc72bce504f7858b334f9c02181e4df87194722fdf38d0c621fe71",
       "minMuxitVersion": "0.3.0",
-      "published": "2026-04-18T13:29:43.563Z"
+      "published": "2026-04-19T07:37:40.894Z"
     },
     {
       "id": "muxit/scpi",
