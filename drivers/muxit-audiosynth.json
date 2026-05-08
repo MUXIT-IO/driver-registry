@@ -1,8 +1,8 @@
 {
   "id": "muxit/audiosynth",
   "name": "AudioSynth",
-  "version": "1.1.0",
-  "description": "Software audio synthesizer. Plays tones, musical notes, and short melodies on the server host's default audio output — useful for lab-side audible notifications, robot/CNC feedback tones, and experiment-complete beeps. Four waveforms (sine, square, triangle, sawtooth), volume control, and click-free envelopes.",
+  "version": "1.4.1",
+  "description": "Software audio synthesizer. Plays tones, musical notes, and short melodies — useful for lab-side audible notifications, robot/CNC feedback tones, and experiment-complete bell sounds. Streams Opus-encoded audio to every connected dashboard by default; can also (or instead) play locally via NAudio on Windows hosts. Four waveforms, ADSR envelopes, additive harmonics, and presets (beep / bell / pluck / pad / marimba).",
   "author": {
     "name": "muxit",
     "github": "muxit-io"
@@ -14,9 +14,10 @@
     "synth",
     "notification"
   ],
-  "downloadUrl": "https://github.com/MUXIT-IO/muxit-drivers/releases/download/driver/muxit-audiosynth/v1.1.0/muxit-audiosynth-v1.1.0.muxdriver",
-  "downloadSize": 242627,
-  "sha256": "c313ccf26a0914af05af8a28731248be55b75fe933e0610b15dc99d3394cbfda",
+  "downloadUrl": "https://github.com/MUXIT-IO/muxit-drivers/releases/download/driver/muxit-audiosynth/v1.4.1/muxit-audiosynth-v1.4.1.muxdriver",
+  "downloadSize": 247893,
+  "sha256": "99c369a20af284f53d4d97b320f718d2936c273e06b5fa425436b725e79b1bd0",
   "minMuxitVersion": "0.3.0",
-  "published": "2026-04-19T07:37:19.860Z"
+  "published": "2026-05-08T13:36:28.344Z",
+  "changelog": "## 1.4.1\n\n### Internal\n\n- Streaming path moved off Concentus and onto the new SDK\n  `AudioStreamEmitter` API. The driver now hands the host a pre-rendered\n  float buffer per note; the host owns Opus encoding, framing, real-time\n  pacing, and stop-frame emission. The wire format is unchanged and\n  Concentus no longer ships in the AudioSynth `.muxdriver` package —\n  it lives once in MuxitServer alongside the central\n  `AudioStreamEncoder`.\n\n### Notes\n\n- No driver-author-visible behavior change. Existing connector configs\n  and scripts continue to work without modification."
 }
