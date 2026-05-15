@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-05-09T07:08:40.215Z",
+  "updated": "2026-05-15T07:20:37.657Z",
   "drivers": [
     {
       "id": "muxit/audiosynth",
@@ -50,7 +50,7 @@
     {
       "id": "muxit/scpi",
       "name": "Scpi",
-      "version": "1.3.0",
+      "version": "1.3.1",
       "description": "Generic SCPI instrument driver — works with any SCPI-compliant device (oscilloscopes, multimeters, function generators, power supplies, spectrum analyzers) over TCP/IP (LXI, raw socket port 5025), Serial (RS-232/USB-to-serial), or USBTMC (direct USB-B). Provides raw query/write access, configurable timeouts, init command sequences, and auto-connect with *IDN? identity query.",
       "author": {
         "name": "muxit",
@@ -63,12 +63,12 @@
         "serial",
         "networking"
       ],
-      "downloadUrl": "https://github.com/MUXIT-IO/muxit-drivers/releases/download/driver/muxit-scpi/v1.3.0/muxit-scpi-v1.3.0.muxdriver",
-      "downloadSize": 591808,
-      "sha256": "86ec7dcf5921a918b9f1ad8ac93f7f444446cad6b602214c3ee45fb116d47ee8",
+      "downloadUrl": "https://github.com/MUXIT-IO/muxit-drivers/releases/download/driver/muxit-scpi/v1.3.1/muxit-scpi-v1.3.1.muxdriver",
+      "downloadSize": 594153,
+      "sha256": "42e885bac59aa588ace93f6a1ef96f84c98c128a7672d9994aa00d8eac6d0ff1",
       "minMuxitVersion": "0.3.0",
-      "published": "2026-05-08T13:39:55.366Z",
-      "changelog": "# Changelog\n\n## 1.2.0\n\n### Features\n\n- Declarative SCPI schema: connectors can describe properties and\n  methods with `config.scpi: { properties, methods }` entries\n  (`voltage: { cmd: \"VOLT\", type: \"float\", unit: \"V\" }`) and the driver\n  synthesises get/set/dispatch. Hand-written overrides still win so\n  vendor quirks stay expressible.\n- On-demand `Details` documentation layer surfaced to the AI prompt and\n  editor hover.\n\n## 1.1.2\n\n### Bug Fixes\n\n- Mirror TX/RX to stdout when `config.debug === true` so transport-level\n  traffic is captured in server logs alongside the driver's structured\n  `scpi` stream.\n\n## 1.1.1\n\nInternal bump for version-verification testing — no user-facing changes.\n\n## 1.1.0\n\n### Bug Fixes\n\n- Stale-response framing fix after reconfigure / timeout: the driver now\n  drains the transport on re-connect, honours a configurable `settleMs`\n  before the first query, and supports an explicit `resync()` action for\n  scripts that need to force a clean slate.\n\n## 1.0.0\n\nInitial release. Generic SCPI driver over TCP/IP (LXI, raw socket :5025)\nand Serial (RS-232/USB). Raw query/write access, configurable timeouts,\ninit command sequences, and auto-connect with `*IDN?` identity query."
+      "published": "2026-05-15T07:20:00.839Z",
+      "changelog": "## 1.3.1\n\n### Bug Fixes\n\n- Coalescing pump now captures the latest pending value **inside** the\n  transport lock, after `EnforceCommandIntervalAsync`. The previous\n  version sampled it at dequeue time, so writes that arrived during the\n  interval wait spawned a fresh pump iteration each — turning\n  `commandIntervalMs: 1000` into a slow staircase instead of a single\n  jump.\n\n### Internal\n\n- Bump every patch release so `Version` makes it easy to tell whether a\n  running driver matches the source tree."
     },
     {
       "id": "muxit/serial-probe",
