@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-05-15T07:20:37.657Z",
+  "updated": "2026-05-28T09:26:43.867Z",
   "drivers": [
     {
       "id": "muxit/audiosynth",
@@ -46,29 +46,6 @@
       "minMuxitVersion": "0.3.0",
       "published": "2026-05-08T13:38:38.859Z",
       "changelog": "# Changelog\n\n## 0.1.2\n\n### Features\n\n- On-demand `Details` documentation layer surfaced to the AI prompt and\n  editor hover.\n\n## 0.1.1\n\nManifest polish — no functional changes.\n\n## 0.1.0\n\nInitial release. Live MIDI input/output over any USB or virtual MIDI\ndevice, per-channel filtering and pass-through, internal 24-PPQN clock\nwith transport control, Standard MIDI File (SMF) playback and recording,\npanic / all-notes-off, and a learn helper for mapping physical controls.\nIncoming events stream as JSON for scripts and dashboards."
-    },
-    {
-      "id": "muxit/scpi",
-      "name": "Scpi",
-      "version": "1.3.1",
-      "description": "Generic SCPI instrument driver — works with any SCPI-compliant device (oscilloscopes, multimeters, function generators, power supplies, spectrum analyzers) over TCP/IP (LXI, raw socket port 5025), Serial (RS-232/USB-to-serial), or USBTMC (direct USB-B). Provides raw query/write access, configurable timeouts, init command sequences, and auto-connect with *IDN? identity query.",
-      "author": {
-        "name": "muxit",
-        "github": "muxit-io"
-      },
-      "group": "instruments",
-      "tier": 3,
-      "tags": [
-        "daq",
-        "serial",
-        "networking"
-      ],
-      "downloadUrl": "https://github.com/MUXIT-IO/muxit-drivers/releases/download/driver/muxit-scpi/v1.3.1/muxit-scpi-v1.3.1.muxdriver",
-      "downloadSize": 594153,
-      "sha256": "42e885bac59aa588ace93f6a1ef96f84c98c128a7672d9994aa00d8eac6d0ff1",
-      "minMuxitVersion": "0.3.0",
-      "published": "2026-05-15T07:20:00.839Z",
-      "changelog": "## 1.3.1\n\n### Bug Fixes\n\n- Coalescing pump now captures the latest pending value **inside** the\n  transport lock, after `EnforceCommandIntervalAsync`. The previous\n  version sampled it at dequeue time, so writes that arrived during the\n  interval wait spawned a fresh pump iteration each — turning\n  `commandIntervalMs: 1000` into a slow staircase instead of a single\n  jump.\n\n### Internal\n\n- Bump every patch release so `Version` makes it easy to tell whether a\n  running driver matches the source tree."
     },
     {
       "id": "muxit/serial-probe",
