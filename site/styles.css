@@ -171,10 +171,15 @@ a:hover { text-decoration: underline; }
   border-bottom: 1px solid var(--border);
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 .dm-driver:hover {
   background: var(--bg-hover);
   text-decoration: none;
+}
+.dm-driver:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
 }
 .dm-driver-info {
   flex: 1;
