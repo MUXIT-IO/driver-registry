@@ -109,18 +109,18 @@ function renderDriverCard(d) {
 
   const desc = d.description ? `<div class="dm-driver-desc">${escapeHtml(d.description)}</div>` : '';
   const download = d.downloadUrl
-    ? `<a class="dm-btn dm-btn-download" href="${escapeHtml(d.downloadUrl)}" onclick="event.stopPropagation()">Download</a>`
+    ? `<a class="dm-btn dm-btn-download" href="${escapeHtml(d.downloadUrl)}">Download</a>`
     : '';
 
   return `
-    <a class="dm-driver" href="./drivers/${escapeHtml(slug)}/">
+    <div class="dm-driver" data-href="./drivers/${escapeHtml(slug)}/" role="link" tabindex="0">
       <div class="dm-driver-info">
         <div class="dm-driver-name">${escapeHtml(d.name)}</div>
         <div class="dm-driver-meta">${meta}</div>
         ${desc}
       </div>
       <div class="dm-driver-actions">${download}</div>
-    </a>
+    </div>
   `;
 }
 
@@ -171,6 +171,24 @@ els.search.addEventListener('input', e => {
 els.sort.addEventListener('change', e => {
   state.sort = e.target.value;
   renderList();
+});
+
+function navigateFromCard(target) {
+  if (target.closest('a, button')) return;
+  const card = target.closest('.dm-driver');
+  if (card && card.dataset.href) {
+    window.location.href = card.dataset.href;
+    return true;
+  }
+}
+
+els.list.addEventListener('click', e => {
+  navigateFromCard(e.target);
+});
+
+els.list.addEventListener('keydown', e => {
+  if (e.key !== 'Enter' && e.key !== ' ') return;
+  if (navigateFromCard(e.target)) e.preventDefault();
 });
 
 load();
