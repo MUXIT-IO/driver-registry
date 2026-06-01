@@ -14,7 +14,7 @@
     "synth",
     "notification"
   ],
-  "downloadUrl": "https://github.com/MUXIT-IO/muxit-drivers/releases/download/driver/muxit-audiosynth/v1.4.1/muxit-audiosynth-v1.4.1.muxdriver",
+  "downloadUrl": "https://github.com/muxit-io/muxit-drivers/releases/download/driver/muxit-audiosynth/v1.4.1/muxit-audiosynth-v1.4.1.muxdriver",
   "downloadSize": 247893,
   "sha256": "99c369a20af284f53d4d97b320f718d2936c273e06b5fa425436b725e79b1bd0",
   "minMuxitVersion": "0.3.0",
