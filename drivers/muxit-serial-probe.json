@@ -17,7 +17,7 @@
   ],
   "license": "MIT",
   "repository": "https://github.com/muxit-io/muxit-drivers",
-  "downloadUrl": "https://github.com/MUXIT-IO/muxit-drivers/releases/download/driver/muxit-serial-probe/v0.2.0/muxit-serial-probe-v0.2.0.muxdriver",
+  "downloadUrl": "https://github.com/muxit-io/muxit-drivers/releases/download/driver/muxit-serial-probe/v0.2.0/muxit-serial-probe-v0.2.0.muxdriver",
   "downloadSize": 13083,
   "sha256": "266fc06a4512bd5904157baa8fdaf8b16d81a53c6c628ecb1e071afa8365323f",
   "minMuxitVersion": "0.3.0",
